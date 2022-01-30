@@ -11,7 +11,7 @@ debug/debugdrawflat
 
 debug/debugambientcube
 
-**Aegina-CSGO-Chamsis a simple CSGO Chams Cheat that allows chams for any materials in game. Easy to paste if you want to XD. (gimme credits :D)**
+**Aegina-CSGO-Chams is a simple CSGO Chams Cheat that allows chams for any materials in game. Easy to paste if you want to XD. (gimme credits :D)**
 
 ## What features exist?
 
