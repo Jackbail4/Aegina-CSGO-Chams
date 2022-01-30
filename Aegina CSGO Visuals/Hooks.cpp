@@ -150,10 +150,8 @@ static HRESULT __stdcall Hooks::hkEndScene(IDirect3DDevice9* pDevice){
 	}
 
 	if (SDK::Helper::GetLocalPlayer() != nullptr) {
-		if (SDK::pIVEngineClient013->isInGame()) {
-			Esp::RunESP();
-			SDK::Convar::InitConvar();
-		}
+		Esp::RunESP();
+		SDK::Convar::InitConvar();
 	}
 
 
