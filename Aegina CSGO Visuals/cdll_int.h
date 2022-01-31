@@ -29,15 +29,9 @@ typedef struct player_info_s {
 
 class IVEngineClient013 {
 public:
-		VIRTUAL_METHOD(void, getScreenSize, 5, (int& w, int& h), (this, std::ref(w), std::ref(h)))
 		VIRTUAL_METHOD(bool, getPlayerInfo, 8, (int entityIndex, player_info_t& playerInfo), (this, entityIndex, std::ref(playerInfo)))
-		VIRTUAL_METHOD(int, getPlayerForUserID, 9, (int userId), (this, userId))
-		VIRTUAL_METHOD(void, getViewAngles, 18, (Vec3& angles), (this, std::ref(angles)))
-		VIRTUAL_METHOD(void, setViewAngles, 19, (const Vec3& angles), (this, std::cref(angles)))
 		VIRTUAL_METHOD(int, getMaxClients, 20, (), (this))
 		VIRTUAL_METHOD(bool, isInGame, 26, (), (this))
-		VIRTUAL_METHOD(bool, isConnected, 27, (), (this))
-		VIRTUAL_METHOD(void*, getBSPTreeQuery, 43, (), (this))
 		VIRTUAL_METHOD(const char*, getLevelName, 53, (), (this))
 		VIRTUAL_METHOD(const Matrix4x4&, worldToScreenMatrix, 37, (), (this))
 		VIRTUAL_METHOD(void, clientCmdUnrestricted, WIN32_LINUX(114, 113), (const char* cmd, bool fromConsoleOrKeybind = false), (this, cmd, fromConsoleOrKeybind))
