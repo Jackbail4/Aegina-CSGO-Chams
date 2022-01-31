@@ -3,7 +3,7 @@
 **Warning: ESP may look strange. If you are experiencing this, enter "fps_max [your_refresh_rate]" into the CSGO console. In addition, you may need to update
 local player offset!**
 
-![Imgur Image](https://i.imgur.com/RfXbhev.png)
+![Imgur Image](https://i.imgur.com/faUouMD.png)
 
 debug/debugdrawflat
 
