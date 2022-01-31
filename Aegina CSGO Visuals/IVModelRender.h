@@ -38,11 +38,6 @@ struct ModelRenderInfo_t{
 
 class IVModelRender{
 public:
-    virtual int DrawModel(int flags, void* pRenderable, uintptr_t instance, int entity_index, const void* model, Vec3 const& origin, Vec3 const& angles, int skin, int body, int hitboxset, const void* modelToWorld = NULL, const void* pLightingOffset = NULL) = 0;
-
     virtual void ForcedMaterialOverride(Material* newMaterial, int nOverrideType = 0, int nOverrides = 0) = 0;
-    virtual bool IsForcedMaterialOverride(void) = 0;
-    virtual void SetViewTarget(const int* pStudioHdr, int nBodyIndex, const Vec3& target) = 0;
     virtual uintptr_t CreateInstance(void* pRenderable, void* pCache = NULL) = 0;
-    virtual void DestroyInstance(uintptr_t handle) = 0;
 };
