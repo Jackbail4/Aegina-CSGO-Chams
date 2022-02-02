@@ -38,6 +38,5 @@ struct ModelRenderInfo_t{
 
 class IVModelRender{
 public:
-    virtual void ForcedMaterialOverride(Material* newMaterial, int nOverrideType = 0, int nOverrides = 0) = 0;
-    virtual uintptr_t CreateInstance(void* pRenderable, void* pCache = NULL) = 0;
+   VIRTUAL_METHOD(void, ForcedMaterialOverride, 1, (Material* newMaterial, int nOverrideType = 0, int nOverrides = 0), (this, newMaterial, nOverrideType, nOverrides))
 };
