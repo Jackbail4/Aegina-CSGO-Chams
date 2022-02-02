@@ -49,7 +49,7 @@ bool SDK::Helper::WorldToScreen(Vec3 Pos3D, ImVec2& Pos2D) {
 }
 
 IClientEntity* SDK::Helper::GetLocalPlayer() {
-   return *(IClientEntity**)((uintptr_t)SDK::ClientDllAddr + 0xDB65EC);
+   return *(IClientEntity**)((uintptr_t)SDK::ClientDllAddr + 0xDB35EC);
 }
 
 bool SDK::Helper::isValidPlayer(IClientEntity* Entity) {
