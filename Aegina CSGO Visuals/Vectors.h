@@ -1,6 +1,4 @@
 #pragma once
-#include <cmath>
-#include <limits>
 
 struct Vec2 {
     float x, y;
