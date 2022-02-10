@@ -1,17 +1,8 @@
 # Aegina-CSGO-Chams
 
-**Warning: ESP may look strange. If you are experiencing this, enter "fps_max [your_refresh_rate]" into the CSGO console. In addition, you may need to update
-local player offset!**
+![Imgur Image](https://i.imgur.com/p5R49Hp.png)
 
-![Imgur Image](https://i.imgur.com/faUouMD.png)
-
-debug/debugdrawflat
-
-![Imgur Image](https://i.imgur.com/QgcXnvB.png)
-
-debug/debugambientcube
-
-**Aegina-CSGO-Chams is a simple CSGO Chams Cheat that allows chams for any materials in game. Easy to paste if you want to XD. (gimme credits :D)**
+**Aegina-CSGO-Chams is a simple CSGO Visual cheat.**
 
 ## What features exist?
 
@@ -24,6 +15,10 @@ debug/debugambientcube
 * Health
 * Armour
 * Customisable weapon chams
+* Weapon name esp
+
+**Warning: ESP may look strange. If you are experiencing this, enter "fps_max [your_refresh_rate]" into the CSGO console. In addition, you may need to update
+local player offset!**
 
 Contributer: https://www.youtube.com/channel/UCksZiAqyBsSWSwi1fjGsTAQ Vens#5629
 
