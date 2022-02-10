@@ -7,14 +7,14 @@ bool Hooks::InitHooks(void){
 
 	IDirect3D9* pD3D = Direct3DCreate9(D3D_SDK_VERSION);
 	IDirect3DDevice9* pDevice = nullptr;
-	D3DPRESENT_PARAMETERS D3Dparams;
+	D3DPRESENT_PARAMETERS D3Dparams{};
 	D3Dparams.SwapEffect = D3DSWAPEFFECT_DISCARD;
 	D3Dparams.hDeviceWindow = hwnd;
 	D3Dparams.Windowed = true;
 	HRESULT Device = pD3D->CreateDevice(D3DADAPTER_DEFAULT, D3DDEVTYPE_HAL, D3Dparams.hDeviceWindow, D3DCREATE_HARDWARE_VERTEXPROCESSING, &D3Dparams, &pDevice);
 	if (Device != S_OK) {
 		D3Dparams.Windowed = false;
-		pD3D->CreateDevice(D3DADAPTER_DEFAULT, D3DDEVTYPE_HAL, D3Dparams.hDeviceWindow, D3DCREATE_HARDWARE_VERTEXPROCESSING, &D3Dparams, &pDevice);
+		Device = pD3D->CreateDevice(D3DADAPTER_DEFAULT, D3DDEVTYPE_HAL, D3Dparams.hDeviceWindow, D3DCREATE_HARDWARE_VERTEXPROCESSING, &D3Dparams, &pDevice);
 		if (Device != S_OK)
 			return false;
 	}
