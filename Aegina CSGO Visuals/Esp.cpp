@@ -33,6 +33,7 @@ bool Esp::DrawHealth(IClientEntity* Entity) {
 
 	ImGui::GetBackgroundDrawList()->AddLine(bl, ImVec2{ bl.x, bl.y + DrawAmount }, ImColor{ r, g,0.f }, 2.f);
 	ImGui::GetBackgroundDrawList()->AddLine(bl, ImVec2{ bl.x + 2, bl.y + DrawAmount + 2}, ImColor{ 0,0,0 }, 1.f);
+
 	ImGui::GetBackgroundDrawList()->AddText(ImVec2{ bl.x, bl.y + DrawAmount - 10 }, ImColor{ 255,255,255 }, std::to_string(Entity->health()).c_str());
 	return true;
 }
@@ -48,7 +49,10 @@ bool Esp::DrawName(IClientEntity* Entity, ImColor Color) {
 	tl = ImVec2{ Head2D.x - height, Head2D.y };
 	tr = ImVec2{ Head2D.x + height, Head2D.y };
 
-	ImGui::GetBackgroundDrawList()->AddText(ImVec2{ tr.x, tr.y - 25 }, ImColor{ Color }, SDK::Helper::GetName(Entity));
+	int TextSize = (0.0254f / SDK::Helper::GetDistance(Entity)) * (SDK::pIVEngineClient013->worldToScreenMatrix()._12 / ImGui::GetIO().DisplaySize.x);
+
+	ImGui::GetBackgroundDrawList()->AddText(ImVec2{ tr.x, tr.y - 25 }, Color, SDK::Helper::GetName(Entity));
+	ImGui::GetBackgroundDrawList()->AddText(ImVec2{ tr.x + 1, tr.y - 24 }, ImColor{ 0,0,0 }, SDK::Helper::GetName(Entity));
 	return true;
 }
 
@@ -167,7 +171,7 @@ bool Esp::DrawWeaponName(IClientEntity* Entity, ImColor Color){
 		break;
 	}
 
-	ImGui::GetBackgroundDrawList()->AddText(Pos2D, ImColor{ 255,255,255 }, WeaponName);
+	ImGui::GetBackgroundDrawList()->AddText(0, 13.f, Pos2D, ImColor{ 255,255,255 }, WeaponName);
 
 	return true;
 }
@@ -211,6 +215,7 @@ void Esp::RunESP(void) {
 					DrawArmour(Entity);
 				if (Opt::Enm::Esp::Lines)
 					DrawLine(Entity, Float3ToImColor(Opt::Enm::Esp::Col));
+
 			}
 			else if (Entity->getTeamNumber() == SDK::Helper::GetLocalPlayer()->getTeamNumber()) {
 				if (Opt::Frn::Esp::Box)
