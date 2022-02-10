@@ -12,21 +12,9 @@ namespace Esp {
 		"debug/debugdrawflat",
 		"debug/debugambientcube",
 		"models/inventory_items/cologne_prediction/cologne_prediction_glass",
-		"models/inventory_items/trophy_majors/matte_metal_normal",
-		"models/player/ct_fbi/ct_fbi_glass",
-		"models/inventory_items/trophy_majors/crystal_clear",
-		"models/gibs/glass/glass",
-		"models/inventory_items/trophy_majors/gloss",
-		"models/inventory_items/wildfire_gold/wildfire_gold_detail",
-		"models/inventory_items/hydra_crystal/hydra_crystal",
-		"models/weapons/customization/stickers/cologne2014/esl_c",
-		"models/inventory_items/dreamhack_trophies/dreamhack_star_blur",
-		"models/inventory_items/hydra_crystal/hydra_crystal_detail",
-		"models/inventory_items/service_medal_2015/glass",
 		"models/inventory_items/service_medal_2016/glass_lvl4",
-		"models/inventory_items/trophy_majors/crystal_blue",
-		"models/inventory_items/trophy_majors/crystal_clear",
-		"models/inventory_items/trophy_majors/gloss",
+		"models/inventory_items/trophy_majors/gold", 
+
 	};
 	namespace Opt {
 		namespace Enm {
